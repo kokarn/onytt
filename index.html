@@ -413,7 +413,8 @@
                 });
 
                 xhr.done( function( loadedData ){
-                    data = loadedData.sort( sortByTimestamp );
+                    // data = loadedData.sort( sortByTimestamp );
+                    data = loadedData;
                     addItems();
                 });
             }
