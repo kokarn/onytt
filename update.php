@@ -1,6 +1,6 @@
 <?php
     $url = 'https://api.instagram.com/v1/';
-    $POST_LIMIT = 100;
+    $POST_LIMIT = 50;
 
     error_reporting( E_ALL );
     ini_set( 'display_errors', 1 );
@@ -35,7 +35,7 @@
 
     foreach( $response->data as $item ) :
         if( !in_array( $item->created_time, $addedTimestamps ) ) :
-            $currentItems[] = array(
+            $currentItems[] = (object) array(
                 'timestamp' => $item->created_time,
                 'image' => $item->images->standard_resolution->url,
                 'id' => $item->id,
