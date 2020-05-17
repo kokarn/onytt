@@ -434,7 +434,7 @@
                     size = size * 2;
                 }
 
-                var $element = $( '<div class="image-wrapper js-image-wrapper"><a href="' + imageData.url + '" title="Visa hela bilden på Instagram"><img src="' + 'https://images.weserv.nl/?url=' + encodeURIComponent( imageData.image ) + '&w=' + size + '&default=https%3A%2F%2Fonytt.se%2Fnot-found.jpg" alt="Objektbild"></a></div>' );
+                var $element = $( '<div class="image-wrapper js-image-wrapper"><a href="' + imageData.url + '" title="Visa hela bilden på Instagram"><img src="' + 'https://images.weserv.nl/?url=https://www.onytt.se/images/' + encodeURIComponent( imageData.id ) + '.jpg&w=' + size + '&default=https%3A%2F%2Fonytt.se%2Fnot-found.jpg" alt="Objektbild"></a></div>' );
 
                 if( images % 5 === 0 ){
                     $element.addClass( 'big' );
